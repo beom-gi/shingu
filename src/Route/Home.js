@@ -2,6 +2,7 @@ import Header from "../Component/Header";
 import Footer from "../Component/Footer";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import BestSeller from "../Component/BestSeller";
 
 const Seciton_main = styled.div`
     background-color: #ecfbcc;
@@ -109,8 +110,6 @@ const Section_sell = styled.div`
     }
 
 `
-const BestSeller = styled.div`
-`
 
 function Home() {
 
@@ -139,9 +138,9 @@ function Home() {
                         <button id="sell_button"><Link to = {'/sell'} className="btnLink"><p>전공책 판매하기</p></Link></button>
                     </div>
                 </Section_sell>
-                <BestSeller></BestSeller>
+                <BestSeller />
             </div>
-            <Footer></Footer>
+            <Footer />
         </div>
     )
 }

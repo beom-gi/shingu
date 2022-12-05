@@ -5,6 +5,8 @@ import Login from './Route/Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Route/Home';
 import Division from './Route/Division';
+import Buy from './Route/PageBuy';
+import Sell from './Route/PageSell';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -28,7 +30,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -102,6 +106,8 @@ function App() {
 			<Route path='/' element={<Home />} />
 			<Route path='/login' element={<Login />}/>
 			<Route path='/home/:division' element={<Division />}/>
+			<Route path='/buy' element={<Buy />}/>
+			<Route path='/sell' element={<Sell />}/>
 	  	</Routes>
 	  </Router>
    
